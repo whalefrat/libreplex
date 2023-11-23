@@ -11,12 +11,12 @@ import { Connection } from "@solana/web3.js";
 
 export const MyMintsInscriber = () => {
   const { publicKey } = useWallet();
-  //const { connection } = useConnection();
-  //console.log("connection_old", connection)
+  const { connection } = useConnection();
+  console.log("connection_old", connection)
 
-  const rpcUrl = 'https://solana-mainnet.g.alchemy.com/v2/pMmDQ11mDHM4EK4S1w_dbTLXvhFQmU7s';
-  const connection = new Connection(rpcUrl, 'confirmed');
-  console.log("connection", connection)
+  //const rpcUrl = 'https://solana-mainnet.g.alchemy.com/v2/pMmDQ11mDHM4EK4S1w_dbTLXvhFQmU7s';
+  //const connection = new Connection(rpcUrl, 'confirmed');
+  //console.log("connection", connection)
 
   const { data, refetch, isFetching } = useTokenAccountsByOwner(
     publicKey,
